@@ -1,4 +1,7 @@
+import { useRouter } from 'next/router';
+
 export default function Header() {
+  const router = useRouter();
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -23,7 +26,9 @@ export default function Header() {
         <a className="btn btn-ghost normal-case text-xl">Steam App</a>
       </div>
       <div className="navbar-end">
-        <a className="btn">Log out</a>
+        <a className="btn" onClick={() => router.push('/')}>
+          Log out
+        </a>
       </div>
     </div>
   );
