@@ -4,7 +4,13 @@ export default function Card(props) {
   return (
     <div className="card card-compact w-96 bg-base-100 shadow-xl">
       <figure>
-        <Image src={props.imageUrl} width="227" height="384" alt={props.name} />
+        <Image
+          className="block h-auto w-full"
+          src={props.imageUrl}
+          alt={props.title}
+          width="600"
+          height="400"
+        />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{props.title}</h2>
